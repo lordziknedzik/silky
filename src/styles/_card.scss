@@ -1,0 +1,66 @@
+@mixin cardImgSettings {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+}
+
+.card {
+  aspect-ratio: 1 / 1.5;
+  background-color: $white;
+  border-radius: 25px;
+  color: $grey;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition-duration: 0.3s;
+  width: 350px;
+
+  &--achievement {
+    align-items: center;
+    display: flex;
+    font-size: $paragraphFontSize;
+    justify-content: flex-start;
+    text-align: left;
+
+    &:first-of-type {
+      font-weight: bold;
+    }
+  }
+
+  &--container {
+    padding: $thumb * 0.75 $thumb;
+    display: flex;
+    flex-direction: column;
+    gap: $thumb * 0.25;
+  }
+
+  &--icon {
+    color: $secondaryColor;
+  }
+
+  &--image {
+    @include cardImgSettings;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--overlay {
+    @include flexCC;
+    @include cardImgSettings;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $white;
+    display: none;
+    font-size: $thumb;
+    position: absolute;
+  }
+  &:hover {
+    transform: scale(1.1);
+    .card--overlay {
+      display: flex;
+    }
+  }
+}

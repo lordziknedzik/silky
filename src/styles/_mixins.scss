@@ -1,0 +1,64 @@
+@mixin paddingPrimaryBackgroundStyles {
+  padding: $baseElementPadding;
+  background-color: $primaryColor;
+  color: $white;
+}
+@mixin paddingAllPrimaryBackgroundStyles {
+  padding: $baseElementPaddingWithUpDown;
+  background-color: $primaryColor;
+  color: $white;
+}
+
+@mixin paddingWhiteStyles {
+  padding: $baseElementPadding;
+  background-color: $white;
+}
+
+@mixin noPaddingWhiteStyles {
+  padding: 0;
+  background-color: $white;
+}
+
+@mixin flexCC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterStart {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+//markdown mixins
+
+@mixin flexCenterLeft {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+@mixin markdownCommon {
+  h1 {
+    margin: 0 0 5px 0;
+    font-size: $headerFontSize;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: $headerFontSize;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: $headerFontSize;
+  }
+  h4 {
+    line-height: $thumb * 0.75;
+    font-size: $headerFontSizeMedium;
+    font-weight: 300;
+
+    &:first-of-type {
+      margin: $thumb 0 0 0;
+    }
+  }
+}

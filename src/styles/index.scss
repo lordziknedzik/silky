@@ -1,0 +1,6 @@
+@import 'resets', 'colors', 'variables', 'fonts', 'mixins', 'global', 'header',
+  'landing', 'card';
+
+* {
+  font-family: $primaryFontFamily;
+}

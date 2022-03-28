@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {FunctionComponent, useContext} from 'react'
+import {Main} from'./pages/Index.page'
+import {Footer, Header} from './components/Index.component'
+import {LandingContext} from './contexts/Landing.context'
+import { CardContext } from './contexts/Card.context';
+import { OfferContext } from './contexts/Offers.context';
+ 
+const App:FunctionComponent = () => {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {loading} = useContext(LandingContext)
+    const {loading: cardLoading} = useContext(CardContext)
+    const {loading: jobsLoading} = useContext(OfferContext)
+
+
+    if (loading || cardLoading || jobsLoading) return (<>Loading</>)
+     
+    return (
+        <div className=''>
+
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+    )
 }
 
 export default App;

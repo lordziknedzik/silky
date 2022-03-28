@@ -1,0 +1,106 @@
+.global {
+  &--button {
+    background: $primaryGradient;
+    background-position: left;
+    background-size: 200%;
+    border-radius: 100rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 275px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      background-position: right;
+    }
+  }
+
+  &--cardContainer {
+    display: flex;
+    width: 100%;
+    padding: 0 10%;
+    justify-content: space-evenly;
+    color: $black;
+  }
+
+  &--icon {
+    cursor: pointer;
+
+    &__round {
+      border-radius: 50%;
+      font-size: $thumb * 0.5;
+    }
+  }
+
+  &--link {
+    margin-right: $thumb * 0.75;
+    color: $white;
+    transition-duration: $animationDuration;
+    border-bottom: 1px solid transparent;
+    padding: 0 2px 5px 2px;
+    text-align: center;
+    &:hover {
+      color: $secondaryColor;
+    }
+
+    &__active {
+      color: $secondaryColor;
+      position: relative;
+      border-bottom: 1px solid $secondaryColor;
+    }
+  }
+
+  &--markdown {
+    @include markdownCommon;
+    h1 {
+      color: $secondaryColor;
+    }
+    h2 {
+      color: $white;
+    }
+    h3 {
+      color: $white;
+    }
+    h4 {
+    }
+
+    &__alternate {
+      @include markdownCommon;
+
+      h1 {
+        color: $black;
+      }
+    }
+  }
+
+  &--paragraph {
+    &__grey {
+      color: $grey;
+    }
+    &__lineHeight {
+      &L {
+        line-height: 35px;
+      }
+    }
+  }
+
+  &--text {
+    &__alignCenter {
+      text-align: center;
+    }
+  }
+
+  &--title {
+    font-size: $headerFontSize;
+    color: $white;
+    &__black {
+      color: $black;
+    }
+  }
+}
