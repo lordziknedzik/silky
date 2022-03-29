@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import {BsLinkedin} from 'react-icons/bs'
 import {LandingContext} from '../contexts/Landing.context'
 import {GlobalContext} from '../contexts/Global.context'
-
+import {Logo} from '../elements/Index.element'
 
 const Header:FunctionComponent = () => {
 
@@ -27,9 +27,7 @@ const Header:FunctionComponent = () => {
 
     return (
         <header className='header'>
-            <Link to='/' className='header--logo' 
-            style={{ backgroundImage: `url(${mainUrl}${data.logo.data.attributes.url} )`  }}
-            />
+            <Logo />
             <nav className='header--nav'>
                 <div className='header-links'>
                     {links.map((link: linkType) => <Link key={link.text} className={`global--link ${pathname === link.to && 'global--link__active'}`} to={link.to}>{link.text} </Link>)}

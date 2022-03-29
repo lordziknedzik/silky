@@ -61,4 +61,15 @@
       margin: $thumb 0 0 0;
     }
   }
+  h5 {
+    font-size: $headerFontSize;
+    margin: 0;
+    line-height: 1.2;
+  }
+  h6 {
+    font-size: $paragraphFontSize;
+    color: $grey;
+    margin: 10px 0 10px 0;
+    font-weight: lighter;
+  }
 }

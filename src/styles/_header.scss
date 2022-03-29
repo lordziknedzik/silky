@@ -9,14 +9,7 @@
     @include flexCC;
   }
 
-  &--logo {
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-position: center left;
-    cursor: pointer;
-    // background-color: green;
-  }
+
 
   &--nav {
     display: flex;

@@ -8,7 +8,7 @@ type respType = { data: { data: { attributes: strapiDataType} }}
 
 type strapiDataType = {headerThree: string, paragraphThree: string, headerOneRich: string, headerTwoRich: string, logo: imgType, headerFourRich: string, 
   map: imgType, reserved:imgType, cropp: imgType, house: imgType, ryje:imgType, mohito: imgType, sinsay: imgType, headerFive: string, paragraphFive: string,
-  headerSixRich: string, headerSeven: string, paragraphSeven: string,
+  headerSixRich: string, headerSeven: string, paragraphSeven: string, headerSevenRich: string,
 }
 
 

@@ -96,12 +96,100 @@
 .landingJobOffers {
   @include flexCC;
   @include paddingWhiteStyles;
+  justify-content: space-around;
 
   &--offer {
+    @include flexCC;
+    border: 2px solid $secondaryColor;
+    border-radius: 70px;
+    box-shadow: 0 10px 10px 5px rgb(0 0 0 / 20%);
+    color: $grey;
+    min-height: $thumb * 1.7;
+    text-align: center;
+    word-wrap: break-word;
+
+    &__element {
+      transition-duration: 0s;
+      color: $grey;
+      width: 20%;
+
+      &:first-of-type {
+        color: $secondaryColor;
+        font-weight: bold;
+        text-align: left;
+      }
+      &:last-of-type {
+        text-align: right;
+      }
+    }
+    &:hover {
+      background-color: $primaryColor;
+      border: 2px solid $primaryColor;
+      transform: scale(1.1);
+      transition-duration: 0.2s;
+
+      .landingJobOffers--offer__element {
+        color: $white;
+      }
+    }
   }
 
+  // &--offer {
+  //   @include flexCC;
+  //   border: 2px solid $secondaryColor;
+  //   border-radius: 70px;
+  //   box-shadow: 0 10px 10px 5px rgb(0 0 0 / 20%);
+  //   color: $grey;
+  //   min-height: $thumb * 1.7;
+  //   text-align: center;
+  //   word-wrap: break-word;
+  //   transition: all 0.2s;
+
+  //   &__element {
+  //     transition-duration: 0s;
+  //     color: $grey;
+  //     width: 20%;
+
+  //     &:first-of-type {
+  //       color: $secondaryColor;
+  //       font-weight: bold;
+  //       text-align: left;
+  //     }
+
+  //     &:last-of-type {
+  //       text-align: right;
+  //     }
+  //   }
+
+  //   &:hover {
+  //     background-color: $primaryColor;
+  //     border: 2px solid $primaryColor;
+  //     transform: scale(1.1);
+  //     transition: all 0.2s;
+
+  //     & * {
+  //       color: $white;
+  //     }
+  //   }
+  // }
+
   &--container {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    &__centered {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &--box {
+    display: flex;
+    flex-direction: column;
+
+    gap: $thumb * 0.5;
+    min-height: 500px;
   }
 
   &--content {
@@ -109,8 +197,40 @@
     font-size: $paragraphFontSize;
 
     :first-of-type {
-      font-size: $headerFontSize;
       font-weight: 600;
     }
   }
+
+  &--search {
+    @include flexCC;
+    width: 80%;
+    height: $thumb * 1.5;
+
+    &__input {
+      background-color: $white;
+      border: 2px solid $secondaryColor;
+      border-radius: 13px 0 0 13px;
+      box-sizing: border-box;
+      font-size: 15px;
+      height: 100%;
+      padding: 0 2% 0 2%;
+      width: 100%;
+    }
+
+    &__button {
+      background: linear-gradient(to right, #14bbb8, #55d58d);
+      border-radius: 0 13px 13px 0;
+      box-sizing: border-box;
+      color: $white;
+      cursor: pointer;
+      font-size: 15px;
+      height: 100%;
+      width: 60%;
+    }
+  }
+}
+
+.spierdalajNaDol {
+  // justify-self: flex-end;
+  // align-self: flex-end;
 }

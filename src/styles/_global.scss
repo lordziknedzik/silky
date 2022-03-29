@@ -56,6 +56,19 @@
     }
   }
 
+  &--logo {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: $thumb;
+    background-position: center left;
+    cursor: pointer;
+    // background-color: green;
+
+    &__noPointer {
+      cursor: default;
+    }
+  }
+
   &--markdown {
     @include markdownCommon;
     h1 {
@@ -75,6 +88,11 @@
 
       h1 {
         color: $black;
+      }
+
+      h4 {
+        font-size: $paragraphFontSize;
+        color: $grey;
       }
     }
   }

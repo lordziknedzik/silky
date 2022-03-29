@@ -1,8 +1,8 @@
 $thumb: 44px;
 
-$standardLeftRigthPadding: 8%;
+$standardLeftRigthPadding: 10%;
 
-$baseElementPadding: 0 $standardLeftRigthPadding;
+$baseElementPadding: $thumb * 1.5 $standardLeftRigthPadding;
 $baseElementPaddingWithUpDown: $thumb * 2 $standardLeftRigthPadding;
 
 $animationDuration: 0.5s;

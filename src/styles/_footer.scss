@@ -1,0 +1,13 @@
+.footer {
+  @include paddingPrimaryBackgroundStyles;
+  @include flexCC;
+  min-height: 2 * $thumb;
+  height: 2 * $thumb;
+
+  &--logo {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 2 * $thumb;
+    background-position: center left;
+  }
+}
